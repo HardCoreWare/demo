@@ -1,0 +1,80 @@
+[   
+    {
+        "name": "Anualidad",
+        "type": "INTEGER",
+        "mode": "REQUIRED"
+    },
+    {
+        "name": "Presupuesto_Total_TI",
+        "type": "RECORD",
+        "mode": "REQUIRED",
+        "fields": [
+            {
+                "name": "Codigo_PEP",
+                "type": "STRING",
+                "mode": "REQUIRED"
+            },
+            {
+                "name": "Descripcion",
+                "type": "STRING",
+                "mode": "REQUIRED"
+            },
+            {
+                "name": "Tipo_Gastos",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields": [
+                    {
+                        "name": "Codigo_PEP",
+                        "type": "STRING",
+                        "mode": "REQUIRED"
+                    },
+                    {
+                        "name": "Descripcion",
+                        "type": "STRING",
+                        "mode": "REQUIRED"
+                    },
+                    {
+                        "name": "Categorias",
+                        "type": "RECORD",
+                        "mode": "REPEATED",
+                        "fields": [
+                            {
+                                "name": "Codigo_PEP",
+                                "type": "STRING",
+                                "mode": "REQUIRED"
+                            },
+                            {
+                                "name": "Descripcion",
+                                "type": "STRING",
+                                "mode": "REQUIRED"
+                            },
+                            {
+                                "name": "PEPs",
+                                "type": "RECORD",
+                                "mode": "REPEATED",
+                                "fields": [
+                                    {
+                                        "name": "Codigo_PEP",
+                                        "type": "STRING",
+                                        "mode": "REQUIRED"
+                                    },
+                                    {
+                                        "name": "Descripcion",
+                                        "type": "STRING",
+                                        "mode": "REQUIRED"
+                                    },
+                                    {
+                                        "name": "Presupuesto",
+                                        "type": "FLOAT",
+                                        "mode": "REQUIRED"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

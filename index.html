@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Demo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+</head>
+<body>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark" id="navbar">
+                <span class="navbar-brand">Filtros</span>
+                <ul class="navbar-nav">
+                      
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="navbardrop" data-toggle="dropdown">Tipo de Gasto</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-item">
+                                <form class="form-inline">
+                                    <label for="">Label</label>
+                                    <input type="checkbox" name="" id="">
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                      
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="navbardrop" data-toggle="dropdown">Categoria</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-item">
+                                <form class="form-inline">
+                                    <div class="row">
+                                        <div class = "col">
+                                            <label for="">Label</label>
+                                        </div>
+                                        <div class = "col">
+                                            <input type="checkbox" name="" id="">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="dropdown-item">
+                                <form class="form-inline">
+                                    <div class="row">
+                                        <div class = "col">
+                                            <label for="">Label</label>
+                                        </div>
+                                        <div class = "col">
+                                            <input type="checkbox" name="" id="">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="dropdown-item">
+                                <form class="form-inline">
+                                    <div class="row">
+                                        <div class = "col">
+                                            <label for="">Label</label>
+                                        </div>
+                                        <div class = "col">
+                                            <input type="checkbox" name="" id="">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="navbardrop" data-toggle="dropdown">PEP</a>
+                        <div class="dropdown-menu">
+                           <div class="dropdown-item">
+                                <form class="form-inline">
+                                    <div class="row">
+                                        <div class = "col">
+                                            <label for="">Label</label>
+                                        </div>
+                                        <div class = "col">
+                                            <input type="checkbox" name="" id="">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="container" id="chartDiv">
+<div class="card mb-3">
+    <div class="card-header">Gastos Mensuales Pagados</div>
+    <div class="card-body">
+      <canvas id="myChart" width="100%" height="30"></canvas>
+    </div>
+
+</div>
+</div>
+
+<br>
+
+<div class="container" id="chartDiv">
+<div class="card mb-3">
+    <div class="card-header">Presupuesto Disponible vs Presupuesto Inicial</div>
+    <div class="card-body">
+      <canvas id="myChart1" width="100%" height="30"></canvas>
+    </div>
+</div>
+</div>
+
+</body>
+<script src="main.js"></script>
+</html>

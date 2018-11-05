@@ -1,0 +1,1304 @@
+[
+    {
+      "Id_Mes": "1",
+      "Gasto_Mensual_TI": {
+        "Codigo_PEP": "GI-TI-TOT",
+        "Descripcion": "Total Gastos TI",
+        "Tipo_Gastos": [
+          {
+            "Codigo_PEP": "GI-APL",
+            "Descripcion": "Aplicaciones",
+            "Categorias": [
+              {
+                "Codigo_PEP": "GI-APL-CNL",
+                "Descripcion": "Canales",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-APL-CNL-B10-202-003",
+                    "Descripcion": "Mantenimiento de Software Banca por Internet",
+                    "Gasto": {
+                      "Real": "6942.62",
+                      "Comprometido": "5040.91"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-CNL-B11-202-001",
+                    "Descripcion": "Mantenimiento de Licencias Mtouch Veritran",
+                    "Gasto": {
+                      "Real": "3331.89",
+                      "Comprometido": "4354.36"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-CNL-B12-202-005",
+                    "Descripcion": "Licencia Autorizador TDD",
+                    "Gasto": {
+                      "Real": "3050.02",
+                      "Comprometido": "197.16"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-APL-COR",
+                "Descripcion": "Core",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-APL-COR-B01-202-009",
+                    "Descripcion": "Licencia de T24",
+                    "Gasto": {
+                      "Real": "28852.22",
+                      "Comprometido": "8642.3"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-COR-B01-202-011",
+                    "Descripcion": "Crecimiento organico usuarios T24",
+                    "Gasto": {
+                      "Real": "976.83",
+                      "Comprometido": "1729.36"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-COR-B05-202-012",
+                    "Descripcion": "Soporte Licencia Fiduciario PROTRUST",
+                    "Gasto": {
+                      "Real": "5735.92",
+                      "Comprometido": "607.72"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-COR-B27-202-021",
+                    "Descripcion": "Licencia SIIF",
+                    "Gasto": {
+                      "Real": "11656.49",
+                      "Comprometido": "4718.25"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-APL-INF",
+                "Descripcion": "Informacion y Suscripciones",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-APL-INF-B58-203-164",
+                    "Descripcion": "Renovacion de Dominios Portales Multiva",
+                    "Gasto": {
+                      "Real": "491.39",
+                      "Comprometido": "223.82"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-APL-MDW",
+                "Descripcion": "Middleware",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-APL-MDW-B16-202-024",
+                    "Descripcion": "Licencia WAS",
+                    "Gasto": {
+                      "Real": "1641.79",
+                      "Comprometido": "1532.52"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-MDW-B20-202-022",
+                    "Descripcion": "Licencia Pivotal",
+                    "Gasto": {
+                      "Real": "1751.35",
+                      "Comprometido": "3140.96"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-MDW-B22-202-023",
+                    "Descripcion": "Licencia Message Broker",
+                    "Gasto": {
+                      "Real": "4279.03",
+                      "Comprometido": "3029.96"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-APL-OST",
+                "Descripcion": "Otros Sistemas",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-APL-OST-B01-202-007",
+                    "Descripcion": "Licencia WAS",
+                    "Gasto": {
+                      "Real": "1462.28",
+                      "Comprometido": "413.1"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-OST-B11-202-060",
+                    "Descripcion": "Licencia Pivotal",
+                    "Gasto": {
+                      "Real": "732.37",
+                      "Comprometido": "765.67"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-OST-B33-202-030",
+                    "Descripcion": "Licencia Pivotal",
+                    "Gasto": {
+                      "Real": "2898.34",
+                      "Comprometido": "676.74"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-OST-C58-202-136",
+                    "Descripcion": "Licencia Message Broker",
+                    "Gasto": {
+                      "Real": "1828.82",
+                      "Comprometido": "617.56"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-APL-OST",
+                "Descripcion": "Sistemas de Gestion",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-APL-OST-B01-202-007",
+                    "Descripcion": "Licencia SAP",
+                    "Gasto": {
+                      "Real": "4089.78",
+                      "Comprometido": "1647.28"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-OST-B11-202-060",
+                    "Descripcion": "Cuota Anual Licenciamiento del Aplicativo",
+                    "Gasto": {
+                      "Real": "870.91",
+                      "Comprometido": "1150.05"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-OST-B33-202-030",
+                    "Descripcion": "Renovacion de Licencias SAS",
+                    "Gasto": {
+                      "Real": "11023.44",
+                      "Comprometido": "12350.22"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-OST-C58-202-136",
+                    "Descripcion": "Licenciamiento Sistema Auditoria/TEAM MATE",
+                    "Gasto": {
+                      "Real": "1126.88",
+                      "Comprometido": "427.65"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Codigo_PEP": "GI-INF",
+            "Descripcion": "Infraestructura",
+            "Categorias": [
+              {
+                "Codigo_PEP": "GI-INF-ALM",
+                "Descripcion": "Almacenamiento",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-ALM-B57-203-155",
+                    "Descripcion": "Almacenamiento INFIDAT",
+                    "Gasto": {
+                      "Real": "735.82",
+                      "Comprometido": "405.11"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-INF-CPR",
+                "Descripcion": "Computo Personal",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-CPR-B40-204-034",
+                    "Descripcion": "Arrendamiento PCs Corporativo y Sucursales Reemplazo",
+                    "Gasto": {
+                      "Real": "652.59",
+                      "Comprometido": "223.85"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-CPR-B40-204-035",
+                    "Descripcion": "Arrendamiento PCs Corporativo y Sucursales Aguascalientes, Leon Y Lindavista",
+                    "Gasto": {
+                      "Real": "799.62",
+                      "Comprometido": "238.4"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-CPR-B40-202-156",
+                    "Descripcion": "Licenciamiento Office 365",
+                    "Gasto": {
+                      "Real": "11.075",
+                      "Comprometido": "5607.39"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-INF-CSR",
+                "Descripcion": "Computo Servidores",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-CSR-B03-204-040",
+                    "Descripcion": "Sistema Lumina Hardware y Host to Host Anexo 07",
+                    "Gasto": {
+                      "Real": "802.6",
+                      "Comprometido": "313.56"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-CSR-B04-204-041",
+                    "Descripcion": "Arrendamiento Servidores SABI",
+                    "Gasto": {
+                      "Real": "1229.86",
+                      "Comprometido": "569.02"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-CSR-C20-202-115",
+                    "Descripcion": "Arrendamiento de PCs Anexo 08",
+                    "Gasto": {
+                      "Real": "103.41",
+                      "Comprometido": "163.36"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-CSR-C20-202-116",
+                    "Descripcion": "Arrendamiento de PCs Anexo 09",
+                    "Gasto": {
+                      "Real": "77.32",
+                      "Comprometido": "76.53"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-CSR-C20-202-117",
+                    "Descripcion": "Arrendamiento de Equipo Anexo 11",
+                    "Gasto": {
+                      "Real": "325.79",
+                      "Comprometido": "29.52"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-INF-DCT",
+                "Descripcion": "Data center",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-DCT-B29-202-043",
+                    "Descripcion": "Licenciamiento Solarwinds",
+                    "Gasto": {
+                      "Real": "1341.13",
+                      "Comprometido": "781.39"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-DCT-B32-203-042",
+                    "Descripcion": "Equipos, Materiales y Herramientas para Mantenimiento de Equipo",
+                    "Gasto": {
+                      "Real": "1388.66",
+                      "Comprometido": "1543.83"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-DCT-B43-204-153",
+                    "Descripcion": "Contrato de Financiamiento Q00032012",
+                    "Gasto": {
+                      "Real": "11996.97",
+                      "Comprometido": "4979.53"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-DCT-B43-204-154",
+                    "Descripcion": "Contrato de Financiamiento Q00032016",
+                    "Gasto": {
+                      "Real": "14797.43",
+                      "Comprometido": "13624.28"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-INF-PFR",
+                "Descripcion": "Perifericos",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-PFR-B21-213-044",
+                    "Descripcion": "Pantallas de Administracion y Mantenimiento Preventivo",
+                    "Gasto": {
+                      "Real": "7081.54",
+                      "Comprometido": "2434.52"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-INF-PTD",
+                "Descripcion": "Proteccion de datos",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-PTD-B20-202-046",
+                    "Descripcion": "Mantenimiento del Sistema de replica",
+                    "Gasto": {
+                      "Real": "46.75",
+                      "Comprometido": "4.48"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-PTD-B22-202-047",
+                    "Descripcion": "Renovacion de Licencias de Renovacion de datos",
+                    "Gasto": {
+                      "Real": "821.51",
+                      "Comprometido": "605.12"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-PTD-B23-203-159",
+                    "Descripcion": "Crecimiento Respaldos CommVault",
+                    "Gasto": {
+                      "Real": "687.59",
+                      "Comprometido": "1216.56"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-PTD-B56-202-049",
+                    "Descripcion": "Soporte Replicacion de datos DRP T24",
+                    "Gasto": {
+                      "Real": "1183.16",
+                      "Comprometido": "539.59"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-PTD-C23-203-123",
+                    "Descripcion": "Adquisicion de 10cintas para respaldar  bases de datos SABI Bursatil",
+                    "Gasto": {
+                      "Real": "85.22",
+                      "Comprometido": "83.63"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-INF-SGI",
+                "Descripcion": "Seguridad",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-SGI-B10-202-062",
+                    "Descripcion": "Crecimiento de usuarios TAM",
+                    "Gasto": {
+                      "Real": "6412.95",
+                      "Comprometido": "2734.19"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-SGI-B10-202-063",
+                    "Descripcion": "Licencia IBM TAM",
+                    "Gasto": {
+                      "Real": "197.46",
+                      "Comprometido": "71.18"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-SGI-B55-203-057",
+                    "Descripcion": "Renovacion tecnologica de Seguridad Perimetral",
+                    "Gasto": {
+                      "Real": "733.35",
+                      "Comprometido": "539.78"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-INF-SPT",
+                "Descripcion": "Software de Plataforma",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-SPT-B03-202-069",
+                    "Descripcion": "Mantenimiento Anual H2H",
+                    "Gasto": {
+                      "Real": "3453.38",
+                      "Comprometido": "1073.05"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-SPT-B03-202-070",
+                    "Descripcion": "Mantenimiento Anual Oracle",
+                    "Gasto": {
+                      "Real": "1636.05",
+                      "Comprometido": "1404.78"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-SPT-B03-202-071",
+                    "Descripcion": "Mantenimiento Anual WAS",
+                    "Gasto": {
+                      "Real": "1475.39",
+                      "Comprometido": "725.48"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-SPT-C22-203-119",
+                    "Descripcion": "Anualidad del Software de Bases de datos Windows SQL para Servidores Virtuales",
+                    "Gasto": {
+                      "Real": "213.7",
+                      "Comprometido": "214.57"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-INF-TLC",
+                "Descripcion": "Telecomunicaciones",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-TLC-B13-213-083",
+                    "Descripcion": "Mantenimiento IVR con Pivotal del Sistema de Linea Multiva",
+                    "Gasto": {
+                      "Real": "1375.78",
+                      "Comprometido": "547.91"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-TLC-B20-203-147",
+                    "Descripcion": "Renovacion Red Campus",
+                    "Gasto": {
+                      "Real": "25669.71",
+                      "Comprometido": "4226.45"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-TLC-C20-206-134",
+                    "Descripcion": "Enlaces de Comunicaciones I2I eInternet",
+                    "Gasto": {
+                      "Real": "929.86",
+                      "Comprometido": "799.88"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-TLC-C23-213-122",
+                    "Descripcion": "Mantenimiento de Equipos Enrutadores",
+                    "Gasto": {
+                      "Real": "121.77",
+                      "Comprometido": "32.04"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-TLC-C25-207-143",
+                    "Descripcion": "Renta de Servicios Telecomunicaciones",
+                    "Gasto": {
+                      "Real": "4200.6",
+                      "Comprometido": "2966.59"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Codigo_PEP": "GI-SER",
+            "Descripcion": "Servicios",
+            "Categorias": [
+              {
+                "Codigo_PEP": "GI-SER-CAM",
+                "Descripcion": "Camara de Compensacion",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-SER-CAM-B10-205-004",
+                    "Descripcion": "Mantenimiento de Multivanet",
+                    "Gasto": {
+                      "Real": "484.56",
+                      "Comprometido": "92.16"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-SER-CAM-B12-205-006",
+                    "Descripcion": "Mantenimiento de Aplicativo",
+                    "Gasto": {
+                      "Real": "1970.02",
+                      "Comprometido": "485.3"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-SER-CAM-B21-207-092",
+                    "Descripcion": "Desarrollo de Contenidos y Distribucion de Informacion a Pantallas",
+                    "Gasto": {
+                      "Real": "5194.78",
+                      "Comprometido": "3348.97"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-SER-CAM-B38-202-091",
+                    "Descripcion": "Suscripcion Anual Gartner",
+                    "Gasto": {
+                      "Real": "3733.28",
+                      "Comprometido": "824.99"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-SER-COR",
+                "Descripcion": "Core",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-SER-COR-B01-209-010",
+                    "Descripcion": "Soporte Aplicativo Nuevos Productos T24",
+                    "Gasto": {
+                      "Real": "733.15",
+                      "Comprometido": "230.96"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-SER-COR-B03-202-015",
+                    "Descripcion": "Soporte y Mantenimiento del Software",
+                    "Gasto": {
+                      "Real": "3801.02",
+                      "Comprometido": "3051.55"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-SER-FSR",
+                "Descripcion": "Field Services",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-SER-FSR-B21-207-094",
+                    "Descripcion": "Mantenimiento Monitoreo de Sites de Sucursales alternativa a TKMe Partida",
+                    "Gasto": {
+                      "Real": "822.24",
+                      "Comprometido": "150.95"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-SER-FSR-B21-207-095",
+                    "Descripcion": "Mantenimiento Monitoreo de Sites Existentes TKMe",
+                    "Gasto": {
+                      "Real": "892.53",
+                      "Comprometido": "661.06"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-SER-FSR-B39-213-093",
+                    "Descripcion": "Mantenimiento ATMs Fuera de Sucursal",
+                    "Gasto": {
+                      "Real": "99.98",
+                      "Comprometido": "15.78"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-SER-HDK",
+                "Descripcion": "Help Desk",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-SER-HDK-B20-207-096",
+                    "Descripcion": "Outsourcing de Personal para Soporte Tecnico",
+                    "Gasto": {
+                      "Real": "12278.49",
+                      "Comprometido": "863.68"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-SER-IMP",
+                "Descripcion": "Impresion",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-SER-IMP-B20-206-097",
+                    "Descripcion": "Arrendamiento de Impresion GFM",
+                    "Gasto": {
+                      "Real": "3349.08",
+                      "Comprometido": "593.53"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-SER-IMP-B20-206-098",
+                    "Descripcion": "Poliza de Mantenimiento Equpo Propio Area Credito",
+                    "Gasto": {
+                      "Real": "923.95",
+                      "Comprometido": "206.19"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-SER-IMP-C20-206-124",
+                    "Descripcion": "Poliza de Mantenimiento Equipo Propio Area Tesoreria",
+                    "Gasto": {
+                      "Real": "3469.75",
+                      "Comprometido": "1100.48"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Id_Mes": "2",
+      "Gasto_Mensual_TI": {
+        "Codigo_PEP": "GI-TI-TOT",
+        "Descripcion": "Total Gastos TI",
+        "Tipo_Gastos": [
+          {
+            "Codigo_PEP": "GI-APL",
+            "Descripcion": "Aplicaciones",
+            "Categorias": [
+              {
+                "Codigo_PEP": "GI-APL-CNL",
+                "Descripcion": "Canales",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-APL-CNL-B10-202-003",
+                    "Descripcion": "Mantenimiento de Software Banca por Internet",
+                    "Gasto": {
+                      "Real": "3162.79",
+                      "Comprometido": "5201.78"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-CNL-B11-202-001",
+                    "Descripcion": "Mantenimiento de Licencias Mtouch Veritran",
+                    "Gasto": {
+                      "Real": "6624.78",
+                      "Comprometido": "3585.05"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-CNL-B12-202-005",
+                    "Descripcion": "Licencia Autorizador TDD",
+                    "Gasto": {
+                      "Real": "4103.49",
+                      "Comprometido": "3240.25"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-APL-COR",
+                "Descripcion": "Core",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-APL-COR-B01-202-009",
+                    "Descripcion": "Licencia de T24",
+                    "Gasto": {
+                      "Real": "21618.01",
+                      "Comprometido": "11129.95"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-COR-B01-202-011",
+                    "Descripcion": "Crecimiento organico usuarios T24",
+                    "Gasto": {
+                      "Real": "2529.2",
+                      "Comprometido": "231.43"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-COR-B05-202-012",
+                    "Descripcion": "Soporte Licencia Fiduciario PROTRUST",
+                    "Gasto": {
+                      "Real": "6886.32",
+                      "Comprometido": "3354.76"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-COR-B27-202-021",
+                    "Descripcion": "Licencia SIIF",
+                    "Gasto": {
+                      "Real": "28138.04",
+                      "Comprometido": "19199.88"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-APL-INF",
+                "Descripcion": "Informacion y Suscripciones",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-APL-INF-B58-203-164",
+                    "Descripcion": "Renovacion de Dominios Portales Multiva",
+                    "Gasto": {
+                      "Real": "379.36",
+                      "Comprometido": "107.45"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-APL-MDW",
+                "Descripcion": "Middleware",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-APL-MDW-B16-202-024",
+                    "Descripcion": "Licencia WAS",
+                    "Gasto": {
+                      "Real": "653.59",
+                      "Comprometido": "1354.98"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-MDW-B20-202-022",
+                    "Descripcion": "Licencia Pivotal",
+                    "Gasto": {
+                      "Real": "2939.76",
+                      "Comprometido": "1405.55"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-MDW-B22-202-023",
+                    "Descripcion": "Licencia Message Broker",
+                    "Gasto": {
+                      "Real": "4717.09",
+                      "Comprometido": "84.47"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-APL-OST",
+                "Descripcion": "Otros Sistemas",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-APL-OST-B01-202-007",
+                    "Descripcion": "Licencia WAS",
+                    "Gasto": {
+                      "Real": "969.29",
+                      "Comprometido": "397.04"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-OST-B11-202-060",
+                    "Descripcion": "Licencia Pivotal",
+                    "Gasto": {
+                      "Real": "2194.76",
+                      "Comprometido": "1607.38"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-OST-B33-202-030",
+                    "Descripcion": "Licencia Pivotal",
+                    "Gasto": {
+                      "Real": "1135.43",
+                      "Comprometido": "937.24"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-OST-C58-202-136",
+                    "Descripcion": "Licencia Message Broker",
+                    "Gasto": {
+                      "Real": "1183.67",
+                      "Comprometido": "1178.87"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-APL-OST",
+                "Descripcion": "Sistemas de Gestion",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-APL-OST-B01-202-007",
+                    "Descripcion": "Licencia SAP",
+                    "Gasto": {
+                      "Real": "4330.89",
+                      "Comprometido": "1081.52"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-OST-B11-202-060",
+                    "Descripcion": "Cuota Anual Licenciamiento del Aplicativo",
+                    "Gasto": {
+                      "Real": "882.0",
+                      "Comprometido": "200.44"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-OST-B33-202-030",
+                    "Descripcion": "Renovacion de Licencias SAS",
+                    "Gasto": {
+                      "Real": "8705.88",
+                      "Comprometido": "10818.17"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-APL-OST-C58-202-136",
+                    "Descripcion": "Licenciamiento Sistema Auditoria/TEAM MATE",
+                    "Gasto": {
+                      "Real": "929.94",
+                      "Comprometido": "309.16"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Codigo_PEP": "GI-INF",
+            "Descripcion": "Infraestructura",
+            "Categorias": [
+              {
+                "Codigo_PEP": "GI-INF-ALM",
+                "Descripcion": "Almacenamiento",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-ALM-B57-203-155",
+                    "Descripcion": "Almacenamiento INFIDAT",
+                    "Gasto": {
+                      "Real": "356.452",
+                      "Comprometido": "569.41"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-INF-CPR",
+                "Descripcion": "Computo Personal",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-CPR-B40-204-034",
+                    "Descripcion": "Arrendamiento PCs Corporativo y Sucursales Reemplazo",
+                    "Gasto": {
+                      "Real": "542.01",
+                      "Comprometido": "90.42"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-CPR-B40-204-035",
+                    "Descripcion": "Arrendamiento PCs Corporativo y Sucursales Aguascalientes, Leon Y Lindavista",
+                    "Gasto": {
+                      "Real": "449.29",
+                      "Comprometido": "556.26"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-CPR-B40-202-156",
+                    "Descripcion": "Licenciamiento Office 365",
+                    "Gasto": {
+                      "Real": "14526.24",
+                      "Comprometido": "6461.74"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-INF-CSR",
+                "Descripcion": "Computo Servidores",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-CSR-B03-204-040",
+                    "Descripcion": "Sistema Lumina Hardware y Host to Host Anexo 07",
+                    "Gasto": {
+                      "Real": "659.14",
+                      "Comprometido": "494.78"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-CSR-B04-204-041",
+                    "Descripcion": "Arrendamiento Servidores SABI",
+                    "Gasto": {
+                      "Real": "527.09",
+                      "Comprometido": "89.26"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-CSR-C20-202-115",
+                    "Descripcion": "Arrendamiento de PCs Anexo 08",
+                    "Gasto": {
+                      "Real": "173.36",
+                      "Comprometido": "116.08"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-CSR-C20-202-116",
+                    "Descripcion": "Arrendamiento de PCs Anexo 09",
+                    "Gasto": {
+                      "Real": "66.01",
+                      "Comprometido": "34.42"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-CSR-C20-202-117",
+                    "Descripcion": "Arrendamiento de Equipo Anexo 11",
+                    "Gasto": {
+                      "Real": "325.5",
+                      "Comprometido": "171.02"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-INF-DCT",
+                "Descripcion": "Data center",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-DCT-B29-202-043",
+                    "Descripcion": "Licenciamiento Solarwinds",
+                    "Gasto": {
+                      "Real": "1176.78",
+                      "Comprometido": "912.07"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-DCT-B32-203-042",
+                    "Descripcion": "Equipos, Materiales y Herramientas para Mantenimiento de Equipo",
+                    "Gasto": {
+                      "Real": "1990.71",
+                      "Comprometido": "851.89"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-DCT-B43-204-153",
+                    "Descripcion": "Contrato de Financiamiento Q00032012",
+                    "Gasto": {
+                      "Real": "20593.81",
+                      "Comprometido": "12184.86"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-DCT-B43-204-154",
+                    "Descripcion": "Contrato de Financiamiento Q00032016",
+                    "Gasto": {
+                      "Real": "14703.89",
+                      "Comprometido": "4128.07"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-INF-PFR",
+                "Descripcion": "Perifericos",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-PFR-B21-213-044",
+                    "Descripcion": "Pantallas de Administracion y Mantenimiento Preventivo",
+                    "Gasto": {
+                      "Real": "5365.19",
+                      "Comprometido": "3587.01"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-INF-PTD",
+                "Descripcion": "Proteccion de datos",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-PTD-B20-202-046",
+                    "Descripcion": "Mantenimiento del Sistema de replica",
+                    "Gasto": {
+                      "Real": "69.25",
+                      "Comprometido": "24.91"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-PTD-B22-202-047",
+                    "Descripcion": "Renovacion de Licencias de Renovacion de datos",
+                    "Gasto": {
+                      "Real": "806.8",
+                      "Comprometido": "677.19"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-PTD-B23-203-159",
+                    "Descripcion": "Crecimiento Respaldos CommVault",
+                    "Gasto": {
+                      "Real": "1852.09",
+                      "Comprometido": "137.94"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-PTD-B56-202-049",
+                    "Descripcion": "Soporte Replicacion de datos DRP T24",
+                    "Gasto": {
+                      "Real": "973.86",
+                      "Comprometido": "188.98"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-PTD-C23-203-123",
+                    "Descripcion": "Adquisicion de 10cintas para respaldar  bases de datos SABI Bursatil",
+                    "Gasto": {
+                      "Real": "103.93",
+                      "Comprometido": "44.87"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-INF-SGI",
+                "Descripcion": "Seguridad",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-SGI-B10-202-062",
+                    "Descripcion": "Crecimiento de usuarios TAM",
+                    "Gasto": {
+                      "Real": "5772.52",
+                      "Comprometido": "4990.64"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-SGI-B10-202-063",
+                    "Descripcion": "Licencia IBM TAM",
+                    "Gasto": {
+                      "Real": "331.55",
+                      "Comprometido": "400.7"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-SGI-B55-203-057",
+                    "Descripcion": "Renovacion tecnologica de Seguridad Perimetral",
+                    "Gasto": {
+                      "Real": "606.01",
+                      "Comprometido": "354.35"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-INF-SPT",
+                "Descripcion": "Software de Plataforma",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-SPT-B03-202-069",
+                    "Descripcion": "Mantenimiento Anual H2H",
+                    "Gasto": {
+                      "Real": "6040.73",
+                      "Comprometido": "1540.51"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-SPT-B03-202-070",
+                    "Descripcion": "Mantenimiento Anual Oracle",
+                    "Gasto": {
+                      "Real": "3017.78",
+                      "Comprometido": "1442.83"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-SPT-B03-202-071",
+                    "Descripcion": "Mantenimiento Anual WAS",
+                    "Gasto": {
+                      "Real": "1327.73",
+                      "Comprometido": "1042.98"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-SPT-C22-203-119",
+                    "Descripcion": "Anualidad del Software de Bases de datos Windows SQL para Servidores Virtuales",
+                    "Gasto": {
+                      "Real": "343.71",
+                      "Comprometido": "166.62"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-INF-TLC",
+                "Descripcion": "Telecomunicaciones",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-INF-TLC-B13-213-083",
+                    "Descripcion": "Mantenimiento IVR con Pivotal del Sistema de Linea Multiva",
+                    "Gasto": {
+                      "Real": "1646.46",
+                      "Comprometido": "196.24"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-TLC-B20-203-147",
+                    "Descripcion": "Renovacion Red Campus",
+                    "Gasto": {
+                      "Real": "16266.89",
+                      "Comprometido": "17923.93"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-TLC-C20-206-134",
+                    "Descripcion": "Enlaces de Comunicaciones I2I eInternet",
+                    "Gasto": {
+                      "Real": "890.52",
+                      "Comprometido": "692.33"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-TLC-C23-213-122",
+                    "Descripcion": "Mantenimiento de Equipos Enrutadores",
+                    "Gasto": {
+                      "Real": "279.9",
+                      "Comprometido": "101.98"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-INF-TLC-C25-207-143",
+                    "Descripcion": "Renta de Servicios Telecomunicaciones",
+                    "Gasto": {
+                      "Real": "2420.03",
+                      "Comprometido": "3751.88"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Codigo_PEP": "GI-SER",
+            "Descripcion": "Servicios",
+            "Categorias": [
+              {
+                "Codigo_PEP": "GI-SER-CAM",
+                "Descripcion": "Camara de Compensacion",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-SER-CAM-B10-205-004",
+                    "Descripcion": "Mantenimiento de Multivanet",
+                    "Gasto": {
+                      "Real": "430.0",
+                      "Comprometido": "462.88"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-SER-CAM-B12-205-006",
+                    "Descripcion": "Mantenimiento de Aplicativo",
+                    "Gasto": {
+                      "Real": "1174.62",
+                      "Comprometido": "1174.2"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-SER-CAM-B21-207-092",
+                    "Descripcion": "Desarrollo de Contenidos y Distribucion de Informacion a Pantallas",
+                    "Gasto": {
+                      "Real": "4809.8",
+                      "Comprometido": "1122.01"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-SER-CAM-B38-202-091",
+                    "Descripcion": "Suscripcion Anual Gartner",
+                    "Gasto": {
+                      "Real": "1288.31",
+                      "Comprometido": "2142.79"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-SER-COR",
+                "Descripcion": "Core",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-SER-COR-B01-209-010",
+                    "Descripcion": "Soporte Aplicativo Nuevos Productos T24",
+                    "Gasto": {
+                      "Real": "994.54",
+                      "Comprometido": "471.43"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-SER-COR-B03-202-015",
+                    "Descripcion": "Soporte y Mantenimiento del Software",
+                    "Gasto": {
+                      "Real": "1718.6",
+                      "Comprometido": "1432.85"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-SER-FSR",
+                "Descripcion": "Field Services",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-SER-FSR-B21-207-094",
+                    "Descripcion": "Mantenimiento Monitoreo de Sites de Sucursales alternativa a TKMe Partida",
+                    "Gasto": {
+                      "Real": "603.43",
+                      "Comprometido": "507.34"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-SER-FSR-B21-207-095",
+                    "Descripcion": "Mantenimiento Monitoreo de Sites Existentes TKMe",
+                    "Gasto": {
+                      "Real": "709.96",
+                      "Comprometido": "358.64"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-SER-FSR-B39-213-093",
+                    "Descripcion": "Mantenimiento ATMs Fuera de Sucursal",
+                    "Gasto": {
+                      "Real": "54.51",
+                      "Comprometido": "55.26"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-SER-HDK",
+                "Descripcion": "Help Desk",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-SER-HDK-B20-207-096",
+                    "Descripcion": "Outsourcing de Personal para Soporte Tecnico",
+                    "Gasto": {
+                      "Real": "6206.07",
+                      "Comprometido": "5524.75"
+                    }
+                  }
+                ]
+              },
+              {
+                "Codigo_PEP": "GI-SER-IMP",
+                "Descripcion": "Impresion",
+                "PEPs": [
+                  {
+                    "Codigo_PEP": "GI-SER-IMP-B20-206-097",
+                    "Descripcion": "Arrendamiento de Impresion GFM",
+                    "Gasto": {
+                      "Real": "2054.04",
+                      "Comprometido": "1464.97"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-SER-IMP-B20-206-098",
+                    "Descripcion": "Poliza de Mantenimiento Equpo Propio Area Credito",
+                    "Gasto": {
+                      "Real": "826.01",
+                      "Comprometido": "862.16"
+                    }
+                  },
+                  {
+                    "Codigo_PEP": "GI-SER-IMP-C20-206-124",
+                    "Descripcion": "Poliza de Mantenimiento Equipo Porpio Area Tesoreria",
+                    "Gasto": {
+                      "Real": "3776.57",
+                      "Comprometido": "2996.51"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]

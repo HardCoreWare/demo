@@ -1,0 +1,3 @@
+GI-APL|Aplicaciones
+GI-INF|Infraestructura
+GI-SER|Servicios
