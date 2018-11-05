@@ -4,6 +4,8 @@ class Informe{
 
     private $Informe=[];
 
+    private $resumen=['Gasto'];
+
     public function __construct(){
 
 
@@ -109,6 +111,8 @@ class Informe{
             }
 
         }
+
+        //print_r($this->Informe['Gastos_Mensuales']);
         
     }
 
@@ -134,7 +138,6 @@ class Informe{
 
                     $this->Informe['Campos'][$presupuesto->Codigo_PEP]['Tipo_Gastos'][$desgloce1->Codigo_PEP]['Categorias'][$desgloce2->Codigo_PEP]['PEPs'][$desgloce3->Codigo_PEP]['Descripcion']=$desgloce3->Descripcion;
 
-
                 }
 
             }
@@ -147,10 +150,28 @@ class Informe{
         
     }
 
+    public function chartData(){
+
+        foreach ($this->Informe['Gastos_Mensuales'] as $mes => $gasto) {
+
+            $this->Resumen['Gastos'][$mes]=$gasto['GI-TI-TOT']['Gasto_Real'];
+            $this->Resumen['Presupuesto'][$mes]['Inicial'] = $this->Informe['Presupuesto_Anual']['GI-TI-TOT']['Presupuesto'];
+            $this->Resumen['Presupuesto'][$mes]['Disponible'] = $this->Informe['Presupuesto_Anual']['GI-TI-TOT']['Presupuesto']-
+            $this->Resumen['Gastos'][$mes]=$gasto['GI-TI-TOT']['Gasto_Total'];
+
+        }
+
+        $resumenJson=json_encode($this->Resumen);
+
+        echo($resumenJson);
+        
+    }
+
 }
 
 $informe= new Informe();
-
-$informe->read2();
+$informe->read0();
+$informe->read1();
+$informe->chartData();
 
 ?>
