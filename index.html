@@ -14,79 +14,265 @@
 </head>
 <body>
 
-
-
 <div class="container">
     <div class="row">
         <div class="col">
             <nav class="navbar navbar-expand-sm navbar-dark bg-dark" id="navbar">
-                <span class="navbar-brand">Filtros</span>
+                <span class="navbar-brand">Anualidad 2018</span>
                 <ul class="navbar-nav">
                       
+                <!-- Primer Nivel de Busqueda -->
+
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="navbardrop" data-toggle="dropdown">Categoria</a>
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split list1"  href="#" id="navbardrop" data-toggle="dropdown">Tipo de Gasto</a>
                         <div class="dropdown-menu">
                             
-                            <div class="dropdown-item">
+                            <div class="dropdown-item" id="item-GI-APL">
                                 <form class="form-inline">
                                     <div class="row">
                                         <div class = "col">
-                                            <label for="">Label</label>
+                                            <label for="">GI-APL</label>
                                         </div>
                                         <div class = "col">
-                                            <input type="checkbox" name="" id="">
+                                            <input type="checkbox" id="GI-APL">
                                         </div>
                                     </div>
                                 </form>
                             </div>
 
-                            <div class="dropdown-item">
+                            <div class="dropdown-item" id="item-GI-INF">
                                 <form class="form-inline">
                                     <div class="row">
                                         <div class = "col">
-                                            <label for="">Label</label>
+                                            <label for="">GI-INF</label>
                                         </div>
                                         <div class = "col">
-                                            <input type="checkbox" name="" id="">
+                                            <input type="checkbox" id="GI-INF">
                                         </div>
                                     </div>
                                 </form>
                             </div>
 
-                            <div class="dropdown-item">
+                            <div class="dropdown-item" id="item-GI-SER">
                                 <form class="form-inline">
                                     <div class="row">
                                         <div class = "col">
-                                            <label for="">Label</label>
+                                            <label for="GI-SER">GI-SER</label>
                                         </div>
                                         <div class = "col">
-                                            <input type="checkbox" name="" id="">
+                                            <input type="checkbox" id="GI-SER">
                                         </div>
                                     </div>
                                 </form>
                             </div>
+
                         </div>
                     </li>
+
+                <!-- Segundo Nivel de Busqueda -->
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="navbardrop" data-toggle="dropdown">PEP</a>
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split list2" href="#" id="navbardrop" data-toggle="dropdown">Categoria</a>
                         <div class="dropdown-menu">
-                           <div class="dropdown-item">
-                                <form class="form-inline">
-                                    <div class="row">
-                                        <div class = "col">
-                                            <label for="">Label</label>
+
+                            <div id="group-GI-APL">
+
+                                <div class="dropdown-item">
+                                    <form class="form-inline">
+                                        <div class="row">
+                                            <div class = "col">
+                                                <label for="">GI-APL-CNL</label>
+                                            </div>
+                                            <div class = "col">
+                                                <input type="checkbox" value="GI-APL-CNL" id="GI-APL-CNL">
+                                            </div>
                                         </div>
-                                        <div class = "col">
-                                            <input type="checkbox" name="" id="">
+                                    </form>
+                                </div>
+
+                                <div class="dropdown-item">
+                                    <form class="form-inline">
+                                        <div class="row">
+                                            <div class = "col">
+                                                <label for="">GI-APL-COR</label>
+                                            </div>
+                                            <div class = "col">
+                                                <input type="checkbox" value="GI-APL-COR" id="GI-APL-COR">
+                                            </div>
+                                        </div>                                    
+                                    </form>
+                                </div>
+
+                                <div class="dropdown-item">
+                                    <form class="form-inline">
+                                        <div class="row">
+                                            <div class = "col">
+                                                <label for="">GI-APL-INF</label>
+                                            </div>
+                                                <div class = "col">
+                                                <input type="checkbox" value="GI-APL-COR" id="GI-APL-INF">
+                                            </div>
                                         </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
+
                             </div>
+
+                            <div id="group-GI-INF">
+
+                                <div class="dropdown-item">
+                                    <form class="form-inline">
+                                        <div class="row">
+                                            <div class = "col">
+                                                <label for="">GI-INF-ALM</label>
+                                            </div>
+                                            <div class = "col">
+                                                <input type="checkbox" value="GI-INF-ALM" id="GI-INF-ALM">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+    
+                                <div class="dropdown-item">
+                                    <form class="form-inline">
+                                        <div class="row">
+                                            <div class = "col">
+                                                <label for="">GI-INF-CPR</label>
+                                            </div>
+                                            <div class = "col">
+                                                <input type="checkbox" value="GI-INF-CPR" id="GI-INF-CPR">
+                                            </div>
+                                        </div>                                    
+                                    </form>
+                                </div>
+                                <div class="dropdown-item">
+                                    <form class="form-inline">
+                                        <div class="row">
+                                            <div class = "col">
+                                                <label for="">GI-INF-CSR</label>
+                                            </div>
+                                            <div class = "col">
+                                                <input type="checkbox" value="GI-INF-CPR" id="GI-INF-CSR">
+                                            </div>
+                                        </div>                                    
+                                    </form>
+                                </div>
+
+                                <div class="dropdown-item">
+                                    <form class="form-inline">
+                                        <div class="row">
+                                            <div class = "col">
+                                                <label for="">GI-INF-DCT</label>
+                                            </div>
+                                            <div class = "col">
+                                                <input type="checkbox" value="GI-INF-DCT" id="GI-INF-DCT">
+                                            </div>
+                                        </div>                                    
+                                    </form>
+                                </div>
+
+
+                            </div>
+
+                            <div id="group-GI-SER">
+
+                                <div class="dropdown-item">
+                                    <form class="form-inline">
+                                        <div class="row">
+                                            <div class = "col">
+                                                <label for="">GI-SER-ALM</label>
+                                            </div>
+                                            <div class = "col">
+                                                <input type="checkbox" value="GI-SER-CAM" id="GI-SER-CAM">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+    
+                                <div class="dropdown-item">
+                                    <form class="form-inline">
+                                        <div class="row">
+                                            <div class = "col">
+                                                <label for="">GI-SER-COR</label>
+                                            </div>
+                                            <div class = "col">
+                                                <input type="checkbox" value="GI-SER-COR" id="GI-SER-COR">
+                                            </div>
+                                        </div>                                    
+                                    </form>
+                                </div>
+                                <div class="dropdown-item">
+                                    <form class="form-inline">
+                                        <div class="row">
+                                            <div class = "col">
+                                                <label for="">GI-SER-FSR</label>
+                                            </div>
+                                            <div class = "col">
+                                                <input type="checkbox" value="GI-SER-FSR" id="GI-SER-FSR">
+                                            </div>
+                                        </div>                                    
+                                    </form>
+                                </div>
+
+
+
+                            </div>
+
                         </div>
                     </li>
 
+                    <!--Tercer Nivel-->>
 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split list3" href="#" id="navbardrop" data-toggle="dropdown">PEP</a>
+                            
+                        <div class="dropdown-menu">
+ 
+                        <!-- PEPSs tercer nivel-->
+                            
+                        <div id="group-GI-APL-CNL">
+    
+                            
+
+                        </div>
+    
+                        <div id="group-GI-APL-COR">
+    
+                        </div>
+    
+                        <div id="group-GI-APL-INF">
+
+                        </div>
+    
+                        <div id="group-GI-INF-ALM">
+
+                        </div>
+
+                        <div id="group-GI-INF-CSR">
+
+                        </div>
+
+                        <div id="group-GI-INF-DCT">
+
+                        </div>
+                                
+                        <div id="group-GI-SER-CAM">
+
+                        </div>
+
+                        <div id="group-GI-SER-CAM">
+
+                        </div>
+
+                        <div id="group-GI-SER-CAM">
+
+                        </div>   
+
+                        <!---->
+
+                        </div>
+                    </li>
+ 
 
                 </ul>
             </nav>
@@ -118,5 +304,6 @@
 </div>
 
 </body>
-<script src="main.js"></script>
+<script src="filters.js"></script>
+<script src="toggle.js"></script>
 </html>

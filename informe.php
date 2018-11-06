@@ -8,11 +8,10 @@ class Informe{
 
     public function __construct(){
 
-
     }
 
     /************************************************************************************************************************************************************************************************/
-    public function read0($filtro1=[],$filtro2=[],$filtro3=[]){
+    public function readPresupuesto(){
 
         $presupuestoJson = file_get_contents('querys/presupuesto_query.json');
 
@@ -20,69 +19,54 @@ class Informe{
 
         $presupuesto=$presupuestos[0]->Presupuesto_Total_TI;
 
+        $presupuesos=null;
+
         $this->Informe['Presupuesto_Anual']['Descripcion']=$presupuesto->Descripcion;
         $this->Informe['Presupuesto_Anual']['Presupuesto']=0;
         $this->Informe['Presupuesto_Anual']['Codigo_PEP']=$presupuesto->Codigo_PEP;
 
+        
         foreach ($presupuesto->Tipo_Gastos as $i1=> $desgloce1) {
 
-            for($fi1=0;$fi1<count($filtro1); $i1++){
+            $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Presupuesto']=0;
+            $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Codigo_PEP']=$desgloce1->Codigo_PEP;
 
-                if($desgloce1->Codigo_PEP==$filtro1[$fi1]){
 
-                    $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Presupuesto']=0;
-                    $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Codigo_PEP']=$desgloce1->Codigo_PEP;
+            foreach ($desgloce1->Categorias as $i2 => $desgloce2) {
 
-                    foreach ($desgloce1->Categorias as $i2 => $desgloce2) {
+                $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Categorias'][$i2]['Presupuesto']=0;
+                $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Categorias'][$i2]['Codigo_PEP']=$desgloce2->Codigo_PEP;
 
-                        for($fi2=0;$fi2<count($filtro2); $i2++){
 
-                            if($desgloce2->Codigo_PEP==$filtro2[$fi2]){
+                foreach ($desgloce2->PEPs as $i3 => $desgloce3) {
 
-                                $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Categorias'][$i2]['Presupuesto']=0;
-                                $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Categorias'][$i2]['Codigo_PEP']=$desgloce2->Codigo_PEP;
-
-                                foreach ($desgloce2->PEPs as $i3 => $desgloce3) {
-
-                                    for($fi3=0;$fi3<count($filtro3); $i3++){
-
-                                        if($desgloce3->Codigo_PEP==$filtro3[$fi3]){
-
-                                            $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Categorias'][$i2]['PEPs'][$i3]['Presupuesto']=floatval($desgloce3->Presupuesto);
-                                            $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Categorias'][$i2]['PEPs'][$i3]['Codigo_PEP']=$i3;
-                                            $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Categorias'][$i2]['Presupuesto']+=floatval($desgloce3->Presupuesto);
-
-                                        }
-
-                                    }
-
-                                }
-
-                                $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Presupuesto']+=
-                                $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Categorias'][$i2]['Presupuesto'];
-
-                            }
-
-                        }
-            
-                    }
-
-                    $this->Informe['Presupuesto_Anual']['Presupuesto']+=
-                    $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Presupuesto'];
+                    $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Categorias'][$i2]['PEPs'][$i3]['Presupuesto']=floatval($desgloce3->Presupuesto);
+                    $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Categorias'][$i2]['PEPs'][$i3]['Codigo_PEP']=$i3;
+                    $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Categorias'][$i2]['Presupuesto']+=floatval($desgloce3->Presupuesto);
 
                 }
 
+                $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Presupuesto']+=
+                $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Categorias'][$i2]['Presupuesto'];
+
             }
+
+            $this->Informe['Presupuesto_Anual']['Presupuesto']+=
+            $this->Informe['Presupuesto_Anual']['Tipo_Gastos'][$i1]['Presupuesto'];
 
         }
 
+        $presupuesto=null;
+
     }
 
-    public function read1($filtro1=[],$filtro2=[],$filtro3=[]){
+    public function readGasto(){
 
         $gastosJson=file_get_contents('querys/gastos_query.json');
 
         $gastos=json_decode($gastosJson);
+
+        $gastosJson=null;
 
         foreach ($gastos as $mensual) {
 
@@ -165,7 +149,6 @@ class Informe{
         echo($resumenJson);
         
     }
-
 
     public function testing(){
 
