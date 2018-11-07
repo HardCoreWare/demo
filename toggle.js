@@ -99,84 +99,245 @@ var filterData={
 
 }
 
-function toggleFilter() {
+function loadFilter(){
+
+                // eventos al hacer click
     
-    $(document).ready(function(){  
+                var Tipo_Gastos = fields.Tipo_Gastos;
 
-        $(".list2").click(function(){
-
-            // eventos al hacer click
+                Tipo_Gastos.forEach(Tipo_Gasto => {
+                    
+                    var Codigo_PEP = Tipo_Gasto.Codigo_PEP;
+                    var htmlId1 = "#" + Codigo_PEP;
+                    var sonHtmlId1 = "#group-"+Codigo_PEP;
+            
+                    if($(htmlId1).is(':checked')){
+                    
+                        $(sonHtmlId1).show();
     
-            var Tipo_Gastos = fields.Tipo_Gastos;
-
-            Tipo_Gastos.forEach(Tipo_Gasto => {
-                
-                var Codigo_PEP = Tipo_Gasto.Codigo_PEP;
-                var htmlId1 = "#" + Codigo_PEP;
-                var sonHtmlId1 = "#group-"+Codigo_PEP;
-        
-                if($(htmlId1).is(':checked')){
-                
-                    $(sonHtmlId1).show();
-
-                    filterData.filters1.push(Codigo_PEP);
-        
-                }
-    
-                else{
-                
-                    $(sonHtmlId1).hide();
-        
-                }
-
-                var Categorias=Tipo_Gasto.Categorias;
-
-                Categorias.forEach(Categoria => {
-
-                    var Codigo_PEP = Categoria.Codigo_PEP;
-                    var htmlId2 = "#" + Codigo_PEP;
-                    var sonHtmlId2 = "#group-" + Codigo_PEP;
-
-                    if($(htmlId2).is(':checked')){
-                
-                        $(sonHtmlId2).show();
-
-                        filterData.filters2.push(Codigo_PEP);
+                        filterData.filters1.push(Codigo_PEP);
             
                     }
         
                     else{
                     
-                        $(sonHtmlId2).hide();
+                        $(sonHtmlId1).hide();
             
                     }
-
-                    var PEPs = Categoria.PEPs;
+    
+                    var Categorias=Tipo_Gasto.Categorias;
+    
+                    Categorias.forEach(Categoria => {
+    
+                        var Codigo_PEP = Categoria.Codigo_PEP;
+                        var htmlId2 = "#" + Codigo_PEP;
+                        var sonHtmlId2 = "#group-" + Codigo_PEP;
+    
+                        if($(htmlId2).is(':checked')){
                     
-                    PEPs.forEach(PEP =>{
-
-                        var Codigo_PEP = PEP.Codigo_PEP;
-                        var htmlId3 = "#" + Codigo_PEP;
-
-                        if($(htmlId3).is(':checked')){
-                
-                            filterData.filters3.push(Codigo_PEP);
+                            $(sonHtmlId2).show();
+    
+                            filterData.filters2.push(Codigo_PEP);
                 
                         }
             
+                        else{
+                        
+                            $(sonHtmlId2).hide();
+                
+                        }
+    
+                        var PEPs = Categoria.PEPs;
+                        
+                        PEPs.forEach(PEP =>{
+    
+                            var Codigo_PEP = PEP.Codigo_PEP;
+                            var htmlId3 = "#" + Codigo_PEP;
+    
+                            if($(htmlId3).is(':checked')){
+                    
+                                filterData.filters3.push(Codigo_PEP);
+                    
+                            }
+                
+                        });
+    
                     });
-
+    
                 });
+    
+}
 
+function resumen(){
+
+    var filters=JSON.stringify(filterData);
+
+    $.ajax({
+
+        url:"model.php",
+        method: "GET",
+        data:{"req":filters},
+
+        beforeSend:function() {
+
+            
+
+        },
+    
+        success:function(response){
+
+            console.log(response);
+    
+            var resumen = JSON.parse(response);
+    
+            datos=[];
+    
+            var gastosReales=[];
+            var gastosComprometidos=[]
+            var presupuestosDisponibles=[];
+            var presupuestosIniciales=[];
+            var meses=[];
+    
+            console.log(resumen);
+    
+            for (var key in resumen) {
+
+                if (resumen.hasOwnProperty(key)) {
+    
+                    switch (key) {
+
+                        case "1": meses.push("Enero"); break;
+                        case "2": meses.push("Febrero"); break;
+                        case "3": meses.push("Marzo"); break;
+                        case "4": meses.push("Abril"); break;
+                        case "5": meses.push("Mayo"); break;
+                        case "6": meses.push("Junio"); break;
+                        case "7": meses.push("Julio"); break;
+                        case "8": meses.push("Agosto"); break;
+                        case "9": meses.push("Septiembre"); break;
+                        case "10": meses.push("Octubre"); break;
+                        case "11": meses.push("Noviembre"); break;
+                        case "12": meses.push("Diciembre"); break;
+
+                    }
+
+                    datos.push(resumen[key]);
+    
+                }
+            }
+    
+            for(var i=0; i<datos.length; i++){
+    
+                var dato = datos[i];
+                var gastoReal=dato.Gasto_Real;
+                var presupuestoDisponible=dato.Presupuesto_Disponible;
+                var presupuestoInicial=dato.Presupuesto_Inicial;
+                var gastoComprometido=dato.Gasto_Comprometido_Acumulado;
+    
+                gastosReales.push(gastoReal);
+                presupuestosDisponibles.push(presupuestoDisponible);
+                presupuestosIniciales.push(presupuestoInicial);
+                gastosComprometidos.push(gastoComprometido);
+    
+            }
+
+            for(var i=0; i<gastosComprometidos.length; i++){
+
+                if(i<(gastosComprometidos.length-1)){
+
+                    gastosComprometidos[i]=0;
+
+                }
+
+            }
+
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'bar',
+          
+                // The data for our dataset
+                data: {
+                    labels: meses,
+                    datasets: [{
+                        label: "Gasto Mensual real",
+                        backgroundColor: 'rgb(132, 99, 240)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: gastosReales,
+                    },
+                    {
+                        label: "Gasto Comprometido Acumulado",
+                        backgroundColor: 'rgb(50, 0, 240)',
+                        borderColor: 'rgb(255, 0, 50)',
+                        data: gastosComprometidos,
+                    }
+                ]
+                },
+            
+                // Configuration options go here
+                options: {}
             });
 
-            console.log(filterData);        
+            
 
-        });
+            var ctx = document.getElementById('myChart1').getContext('2d');
+            var chart1 = new Chart(ctx, {
+                    // The type of chart we want to create
+                    type: 'bar',
+    
+                    // The data for our dataset
+                    data: {
+                        labels: meses,
+                        datasets: [{
+                            label: "Presupuesto Anual gastado",
+                            backgroundColor: 'rgb(15, 50, 240)',
+                            borderColor: 'rgb(255, 99, 50)',
+                            data: presupuestosIniciales,
+                        },
+                        {
+                            label: "Presupuesto Remanente",
+                            backgroundColor: 'rgb(15, 0, 240)',
+                            borderColor: 'rgb(255, 0, 50)',
+                            data: presupuestosDisponibles,
+                        }
+                    ]
+                    },
+    
+                    // Configuration options go here
+                    options: {}
+            });
 
+        }
+    
     });
 
 }
 
-toggleFilter();
+
+$(document).ready(function(){  
+
+    $(".list1").click(function(){
+
+        loadFilter();  
+        resumen();
+
+    });
+
+    $(".list2").click(function(){
+
+        loadFilter();
+        resumen();
+
+    });
+
+    $(".list3").click(function(){
+
+        loadFilter(); 
+        resumen(); 
+
+    });
+
+});
+
+
 
