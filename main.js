@@ -1,8 +1,8 @@
 var filterData={
 
-    filters1:["GI-APL","GI-SERR"],
+    filters1:["GI-APL","GI-SER"],
     filters2:["GI-APL-CNL"],
-    filters3:["GI-APL-CNL-B10-202-003"]
+    filters3:["GI-APL-CNL-B10-202-003","GI-APL-CNL-B11-202-001"]
 
 }
 
@@ -13,9 +13,7 @@ function resumen(){
     $.ajax({
 
         url:"model.php",
-    
         method: "GET",
-    
         data:{"req":filters},
 
         beforeSend:function() {
@@ -33,13 +31,9 @@ function resumen(){
             datos=[];
     
             var gastosReales=[];
-
             var gastosComprometidos=[]
-    
             var presupuestosDisponibles=[];
-    
             var presupuestosIniciales=[];
-    
             var meses=[];
     
             console.log(resumen);
@@ -69,8 +63,6 @@ function resumen(){
     
                 }
             }
-
-            console.log(meses);
     
             for(var i=0; i<datos.length; i++){
     
@@ -86,8 +78,6 @@ function resumen(){
                 gastosComprometidos.push(gastoComprometido);
     
             }
-
-            console.log(gastosComprometidos);
 
             for(var i=0; i<gastosComprometidos.length; i++){
 
@@ -126,10 +116,10 @@ function resumen(){
                 options: {}
             });
 
-
+            
 
             var ctx = document.getElementById('myChart1').getContext('2d');
-                var chart1 = new Chart(ctx, {
+            var chart1 = new Chart(ctx, {
                     // The type of chart we want to create
                     type: 'bar',
     
@@ -153,7 +143,7 @@ function resumen(){
     
                     // Configuration options go here
                     options: {}
-                });
+            });
 
         }
     
