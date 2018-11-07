@@ -1,10 +1,10 @@
 var filterData={
 
-        filters1:["GI-APL","GI-SERR"],
+    filters1:["GI-APL","GI-SERR"],
 
-        filters2:["GI-APL-CNL"],
+    filters2:["GI-APL-CNL"],
 
-        filters3:["GI-APL-CNL-B10-202-003"]
+    filters3:["GI-APL-CNL-B10-202-003"]
 
 }
 
@@ -14,7 +14,7 @@ function resumen(){
 
     $.ajax({
 
-        url:"model1.php",
+        url:"model.php",
     
         method: "GET",
     
@@ -29,7 +29,7 @@ function resumen(){
         success:function(response){
 
             console.log(response);
-/*    
+    
             var resumen = JSON.parse(response);
     
             datos=[];
@@ -45,13 +45,32 @@ function resumen(){
             console.log(resumen);
     
             for (var key in resumen) {
+
                 if (resumen.hasOwnProperty(key)) {
     
-                    meses.push(key);
+                    switch (key) {
+
+                        case "1": meses.push("Enero"); break;
+                        case "2": meses.push("Febrero"); break;
+                        case "3": meses.push("Marzo"); break;
+                        case "4": meses.push("Abril"); break;
+                        case "5": meses.push("Mayo"); break;
+                        case "6": meses.push("Junio"); break;
+                        case "7": meses.push("Julio"); break;
+                        case "8": meses.push("Agosto"); break;
+                        case "9": meses.push("Septiembre"); break;
+                        case "10": meses.push("Octubre"); break;
+                        case "11": meses.push("Noviembre"); break;
+                        case "12": meses.push("Diciembre"); break;
+
+                    }
+
                     datos.push(resumen[key]);
     
                 }
             }
+
+            console.log(meses);
     
             for(var i=0; i<datos.length; i++){
     
@@ -65,18 +84,18 @@ function resumen(){
                 presupuestosIniciales.push(presupuestoInicial);
     
             }
-    
+
             var ctx = document.getElementById('myChart').getContext('2d');
             var chart = new Chart(ctx, {
                 // The type of chart we want to create
                 type: 'line',
-            
+          
                 // The data for our dataset
                 data: {
                     labels: meses,
                     datasets: [{
                         label: "Gasto Mensual",
-                        fill: 'false',
+                        backgroundColor: 'rgb(132, 99, 240)',
                         borderColor: 'rgb(255, 99, 132)',
                         data: gastosReales,
                     }]
@@ -86,7 +105,8 @@ function resumen(){
                 options: {}
             });
     
-    
+            console.log(gastosReales);
+
             var ctx = document.getElementById('myChart1').getContext('2d');
                 var chart1 = new Chart(ctx, {
                     // The type of chart we want to create
@@ -113,8 +133,7 @@ function resumen(){
                     // Configuration options go here
                     options: {}
                 });
-    
-*/
+
         }
     
     });
