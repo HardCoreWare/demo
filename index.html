@@ -15,16 +15,21 @@
 <body>
 
 
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark" id="navbar">
+            <header class="navbar navbar-expand-sm navbar-dark bg-dark" id="navbar">
+                <div class="container-fluid">
                 <div class="row">
 
-                    <div class="col">
+                    <div class="col-md-4">
                         <span class="navbar-brand">Anualidad 2018</span>
                     </div>
 
-                    <div class="col">   
+                    <div class="col-md-8">   
                         <ul class="navbar-nav">
+
                             <!-- Primer Nivel de Busqueda -->
+                            <div class="container-fluid">
+                            <div class="row">
+                            <div class="col-md-4">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle dropdown-toggle-split list1"  href="#" id="navbardrop" data-toggle="dropdown">Tipo de Gasto</a>
                                 <div class="dropdown-menu">
@@ -70,7 +75,10 @@
 
                                 </div>
                             </li>
+                            </div>
+
                             <!-- Segundo Nivel de Busqueda -->
+                            <div class="col-md-4">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle dropdown-toggle-split list2" href="#" id="navbardrop" data-toggle="dropdown">Categoria</a>
                                 <div class="dropdown-menu">
@@ -214,13 +222,14 @@
                                             </form>
                                         </div>
 
-
-
                                     </div>
 
                                 </div>
                             </li>
+                            </div> 
+
                             <!--Tercer Nivel-->
+                            <div class="col-md-4">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle dropdown-toggle-split list3" href="#" id="navbardrop" data-toggle="dropdown">PEP</a>
                                     
@@ -256,36 +265,35 @@
                                             </form>
                                         </div>
 
-                                            <div class="dropdown-item">
-                                                <form class="form-inline">
-                                                    <div class="row">
-                                                        <div class = "col">
-                                                            <label for="">GI-APL-CNL-B12-202-005</label>
-                                                        </div>
-                                                        <div class = "col">
-                                                            <input type="checkbox" value="GI-APL-CNL-B12-202-005" id="GI-APL-CNL-B12-202-005">
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-
-                                    </div>
-            
-
-                                    <div id="group-GI-APL-COR">
-
                                         <div class="dropdown-item">
                                             <form class="form-inline">
                                                 <div class="row">
                                                     <div class = "col">
-                                                        <label for="">GI-APL-COR-B10-202-009</label>
+                                                        <label for="">GI-APL-CNL-B12-202-005</label>
                                                     </div>
                                                     <div class = "col">
-                                                        <input type="checkbox" value="GI-APL-COR-B11-202-009" id="GI-APL-COR-B01-202-009">
+                                                        <input type="checkbox" value="GI-APL-CNL-B12-202-005" id="GI-APL-CNL-B12-202-005">
                                                     </div>
                                                 </div>
                                             </form>
                                         </div>
+
+                                    </div>
+
+                                    <div id="group-GI-APL-COR">
+
+                                    <div class="dropdown-item">
+                                        <form class="form-inline">
+                                            <div class="row">
+                                                <div class = "col">
+                                                    <label for="">GI-APL-COR-B10-202-009</label>
+                                                </div>
+                                                <div class = "col">
+                                                    <input type="checkbox" value="GI-APL-COR-B11-202-009" id="GI-APL-COR-B01-202-009">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
 
                                         <div class="dropdown-item">
                                             <form class="form-inline">
@@ -374,12 +382,18 @@
 
                                 </div>
                             </li>
+                            </div>
+                            </div>
+                            </div>
+
                         </ul>
+
                     </div>
 
                 </div>
+                </div>
 
-            </nav>
+            </header>
 
 <br>
 
@@ -405,7 +419,6 @@
 </div>
 
 </body>
-<script src="filters.js"></script>
 <script src="toggle.js"></script>
-<script src="main.js"></script>
+<!--<script src="main.js"></script>-->
 </html>
