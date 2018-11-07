@@ -342,6 +342,8 @@ $(document).ready(function(){
 
 $("#btnInforme").click(function(){
 
+    loadFilter(); 
+
     resumen(); 
 
 });
