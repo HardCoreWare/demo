@@ -1,5 +1,25 @@
-li{
+*{
 
-width: 100px;
+    margin: 0%;
+
+    padding: 0%;
+
+}
+
+.navitem{
+
+    margin:auto;
+
+}
+
+.dropdown-menu{
+
+    width: 250px;
+
+}
+
+.input{
+
+
 
 }

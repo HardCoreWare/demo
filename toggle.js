@@ -319,25 +319,26 @@ $(document).ready(function(){
     $(".list1").click(function(){
 
         loadFilter();  
-        resumen();
 
     });
 
     $(".list2").click(function(){
 
         loadFilter();
-        resumen();
 
     });
 
     $(".list3").click(function(){
 
         loadFilter(); 
-        resumen(); 
 
     });
 
 });
 
+$("#btnInforme").click(function(){
 
+    resumen(); 
+
+});
 
