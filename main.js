@@ -1,30 +1,14 @@
-var filtros = {
+var filterData={
 
-    Tipo_Gastos=[
+        filters1:["GI-APL","GI-SERR"],
 
-        {
-            Codigo_PEP:"GI-APL",
-            Descripcion:"hola",
-            Categorias:[]
+        filters2:["GI-APL-CNL"],
 
-        },
-        {
-            Codigo_PEP:"GI-APL",
-            Descripcion:"hola",
-            Categorias:[]
-
-        
-        },
-        {
-            Codigo_PEP:"GI-APL",
-            Descripcion:"hola",
-            Categorias:[]
-
-        }
-
-    ]
+        filters3:["GI-APL-CNL-B10-202-003"]
 
 }
+
+var filters=JSON.stringify(filterData);
 
 function resumen(){
 
@@ -34,10 +18,18 @@ function resumen(){
     
         method: "GET",
     
-        data:"",
+        data:{"req":filters},
+
+        beforeSend:function() {
+
+            
+
+        },
     
         success:function(response){
-    
+
+            console.log(response);
+/*    
             var resumen = JSON.parse(response);
     
             datos=[];
@@ -122,7 +114,7 @@ function resumen(){
                     options: {}
                 });
     
-    
+*/
         }
     
     });
