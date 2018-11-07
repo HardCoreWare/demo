@@ -6,21 +6,21 @@ var fields={
 
             {Codigo_PEP:"GI-APL-CNL",PEPs:[
 
-                "GI-APL-CNL-B10-202-003",
-                "GI-APL-CNL-B11-202-001",
-                "GI-APL-CNL-B12-202-005"
+                {Codigo_PEP:"GI-APL-CNL-B10-202-003"},
+                {Codigo_PEP:"GI-APL-CNL-B11-202-001"},
+                {Codigo_PEP:"GI-APL-CNL-B12-202-005"}
             ]
         },
             {Codigo_PEP:"GI-APL-COR",PEPs:[
 
-                "GI-APL-COR-B01-202-009",
-                "GI-APL-COR-B01-202-011",
-                "GI-APL-COR-B27-202-021"
+                {Codigo_PEP:"GI-APL-COR-B01-202-009"},
+                {Codigo_PEP:"GI-APL-COR-B01-202-011"},
+                {Codigo_PEP:"GI-APL-COR-B27-202-021"}
             ]
         },
             {Codigo_PEP:"GI-APL-INF",PEPs:[
 
-                "GI-APL-COR-B58-203-164"
+                {Codigo_PEP:"GI-APL-COR-B58-203-164"}
 
             ]}
 
@@ -30,30 +30,30 @@ var fields={
 
             {Codigo_PEP:"GI-INF-ALM",PEPs:[
                 
-                "GI-INF-ALM-B57-203-155"
+                {Codigo_PEP:"GI-INF-ALM-B57-203-155"}
 
             ]
         },
             {Codigo_PEP:"GI-INF-CPR",PEPs:[
 
-                "GI-INF-CPR-B40-204-034",
-                "GI-INF-CPR-B40-204-035",
-                "GI-INF-CPR-B20-202-156"
+                {Codigo_PEP:"GI-INF-CPR-B40-204-034"},
+                {Codigo_PEP:"GI-INF-CPR-B40-204-035"},
+                {Codigo_PEP:"GI-INF-CPR-B20-202-156"}
 
             ]
         },
             {Codigo_PEP:"GI-INF-CSR",PEPs:[
 
-                "GI-INF-CSR-B03-204-034",
-                "GI-INF-CSR-B04-204-035",
-                "GI-INF-CSR-C20-204-115"
+                {Codigo_PEP:"GI-INF-CSR-B03-204-034"},
+                {Codigo_PEP:"GI-INF-CSR-B04-204-035"},
+                {Codigo_PEP:"GI-INF-CSR-C20-204-115"}
             ]
         },
             {Codigo_PEP:"GI-INF-DCT",PEPs:[
 
-                "GI-INF-DCT-B29-202-040",
-                "GI-INF-DCT-B32-203-042",
-                "GI-INF-DCT-B43-204-153"
+                {Codigo_PEP:"GI-INF-DCT-B29-202-040"},
+                {Codigo_PEP:"GI-INF-DCT-B32-203-042"},
+                {Codigo_PEP:"GI-INF-DCT-B43-204-153"}
 
             ]
         }
@@ -64,23 +64,23 @@ var fields={
 
             {Codigo_PEP:"GI-SER-CAM",PEPs:[
 
-                "GI-SER-CAM-B10-205-004",
-                "GI-SER-CAM-B21-207-092",
-                "GI-SER-CAM-B38-214-091"
+                {Codigo_PEP:"GI-SER-CAM-B10-205-004"},
+                {Codigo_PEP:"GI-SER-CAM-B21-207-092"},
+                {Codigo_PEP:"GI-SER-CAM-B38-214-091"}
 
             ]
         },
             {Codigo_PEP:"GI-SER-COR",PEPs:[
 
-                "GI-SER-COR-B01-209-010",
-                "GI-SER-COR-B03-202-015"
+                {Codigo_PEP:"GI-SER-COR-B01-209-010"},
+                {Codigo_PEP:"GI-SER-COR-B03-202-015"}
             ]
         },
             {Codigo_PEP:"GI-SER-FSR",PEPs:[
 
-                "GI-SER-FSR-B21-207-094",
-                "GI-SER-FSR-B21-207-095",
-                "GI-SER-FSR-B21-207-093"
+                {Codigo_PEP:"GI-SER-FSR-B21-207-094"},
+                {Codigo_PEP:"GI-SER-FSR-B21-207-095"},
+                {Codigo_PEP:"GI-SER-FSR-B21-207-093"}
 
             ]
         }
@@ -158,8 +158,6 @@ function toggleFilter() {
                         var Codigo_PEP = PEP.Codigo_PEP;
                         var htmlId3 = "#" + Codigo_PEP;
 
-                        console.log(htmlId3);
-
                         if($(htmlId3).is(':checked')){
                 
                             filterData.filters3.push(Codigo_PEP);
@@ -172,8 +170,8 @@ function toggleFilter() {
 
             });
 
-    console.log(filterData);        
-    //
+            console.log(filterData);        
+
         });
 
     });
