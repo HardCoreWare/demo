@@ -173,6 +173,7 @@ function loadFilter(){
 }
 
 function resumen(){
+    console.log(filterData);
 
     var filters=JSON.stringify(filterData);
 
