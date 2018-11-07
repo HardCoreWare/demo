@@ -1,3 +1,6 @@
+var chart=null;
+var chart1=null;
+
 var fields={
 
     Tipo_Gastos:[
@@ -257,7 +260,7 @@ function resumen(){
             }
 
             var ctx = document.getElementById('myChart').getContext('2d');
-            var chart = new Chart(ctx, {
+            chart = new Chart(ctx, {
                 // The type of chart we want to create
                 type: 'bar',
           
@@ -286,7 +289,7 @@ function resumen(){
             
 
             var ctx = document.getElementById('myChart1').getContext('2d');
-            var chart1 = new Chart(ctx, {
+            chart1 = new Chart(ctx, {
                     // The type of chart we want to create
                     type: 'bar',
     
@@ -294,13 +297,13 @@ function resumen(){
                     data: {
                         labels: meses,
                         datasets: [{
-                            label: "Presupuesto Anual gastado",
+                            label: "Presupuesto Anual Gastado",
                             backgroundColor: 'rgb(240, 50, 15)',
                             borderColor: 'rgb(255, 99, 50)',
                             data: presupuestosIniciales,
                         },
                         {
-                            label: "Presupuesto Remanente",
+                            label: "Presupuesto Anual Disponible",
                             backgroundColor: 'rgb(15, 0, 240)',
                             borderColor: 'rgb(255, 0, 50)',
                             data: presupuestosDisponibles,
