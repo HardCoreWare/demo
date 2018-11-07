@@ -140,6 +140,8 @@ function loadFilter(){
                         var htmlId2 = "#" + Codigo_PEP;
                         var sonHtmlId2 = "#group-" + Codigo_PEP;
     
+                        console.log(sonHtmlId2);
+
                         if($(htmlId2).is(':checked')){
                     
                             $(sonHtmlId2).show();
