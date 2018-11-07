@@ -101,7 +101,11 @@ var filterData={
 
 function loadFilter(){
 
-                // eventos al hacer click
+                filterData.filters1=[];
+                filterData.filters2=[];
+                filterData.filters3=[];
+
+                console.log(filterData);
     
                 var Tipo_Gastos = fields.Tipo_Gastos;
 
