@@ -262,13 +262,13 @@ function resumen(){
                     datasets: [{
                         label: "Gasto Mensual real",
                         backgroundColor: 'rgb(132, 99, 240)',
-                        borderColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(120, 99, 255)',
                         data: gastosReales,
                     },
                     {
                         label: "Gasto Comprometido Acumulado",
                         backgroundColor: 'rgb(50, 0, 240)',
-                        borderColor: 'rgb(255, 0, 50)',
+                        borderColor: 'rgb(255, 0, 0)',
                         data: gastosComprometidos,
                     }
                 ]
@@ -290,7 +290,7 @@ function resumen(){
                         labels: meses,
                         datasets: [{
                             label: "Presupuesto Anual gastado",
-                            backgroundColor: 'rgb(15, 50, 240)',
+                            backgroundColor: 'rgb(240, 50, 15)',
                             borderColor: 'rgb(255, 99, 50)',
                             data: presupuestosIniciales,
                         },

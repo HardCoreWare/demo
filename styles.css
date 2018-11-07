@@ -10,11 +10,13 @@
 
     margin:auto;
 
+    font-size:12px;
+
 }
 
 .dropdown-menu{
 
-    width: 250px;
+    width: 280px;
 
 }
 
