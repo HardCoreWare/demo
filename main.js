@@ -1,9 +1,7 @@
 var filterData={
 
     filters1:["GI-APL","GI-SERR"],
-
     filters2:["GI-APL-CNL"],
-
     filters3:["GI-APL-CNL-B10-202-003"]
 
 }
@@ -35,6 +33,8 @@ function resumen(){
             datos=[];
     
             var gastosReales=[];
+
+            var gastosComprometidos=[]
     
             var presupuestosDisponibles=[];
     
@@ -78,34 +78,55 @@ function resumen(){
                 var gastoReal=dato.Gasto_Real;
                 var presupuestoDisponible=dato.Presupuesto_Disponible;
                 var presupuestoInicial=dato.Presupuesto_Inicial;
+                var gastoComprometido=dato.Gasto_Comprometido_Acumulado;
     
                 gastosReales.push(gastoReal);
                 presupuestosDisponibles.push(presupuestoDisponible);
                 presupuestosIniciales.push(presupuestoInicial);
+                gastosComprometidos.push(gastoComprometido);
     
+            }
+
+            console.log(gastosComprometidos);
+
+            for(var i=0; i<gastosComprometidos.length; i++){
+
+                if(i<(gastosComprometidos.length-1)){
+
+                    gastosComprometidos[i]=0;
+
+                }
+
             }
 
             var ctx = document.getElementById('myChart').getContext('2d');
             var chart = new Chart(ctx, {
                 // The type of chart we want to create
-                type: 'line',
+                type: 'bar',
           
                 // The data for our dataset
                 data: {
                     labels: meses,
                     datasets: [{
-                        label: "Gasto Mensual",
+                        label: "Gasto Mensual real",
                         backgroundColor: 'rgb(132, 99, 240)',
                         borderColor: 'rgb(255, 99, 132)',
                         data: gastosReales,
-                    }]
+                    },
+                    {
+                        label: "Gasto Comprometido Acumulado",
+                        backgroundColor: 'rgb(50, 0, 240)',
+                        borderColor: 'rgb(255, 0, 50)',
+                        data: gastosComprometidos,
+                    }
+                ]
                 },
             
                 // Configuration options go here
                 options: {}
             });
-    
-            console.log(gastosReales);
+
+
 
             var ctx = document.getElementById('myChart1').getContext('2d');
                 var chart1 = new Chart(ctx, {
@@ -117,14 +138,14 @@ function resumen(){
                         labels: meses,
                         datasets: [{
                             label: "Presupuesto Anual gastado",
-                            backgroundColor: 'rgb(132, 99, 240)',
-                            borderColor: 'rgb(255, 99, 132)',
+                            backgroundColor: 'rgb(15, 50, 240)',
+                            borderColor: 'rgb(255, 99, 50)',
                             data: presupuestosIniciales,
                         },
                         {
                             label: "Presupuesto Remanente",
-                            backgroundColor: 'rgb(15, 99, 240)',
-                            borderColor: 'rgb(255, 99, 132)',
+                            backgroundColor: 'rgb(15, 0, 240)',
+                            borderColor: 'rgb(255, 0, 50)',
                             data: presupuestosDisponibles,
                         }
                     ]
@@ -137,7 +158,6 @@ function resumen(){
         }
     
     });
-
 
 }
 

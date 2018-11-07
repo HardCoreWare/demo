@@ -144,7 +144,7 @@ class Informe{
             }
 
         }
-        
+
     }
 
 /*********************************************************************************************************************************************************/
@@ -152,12 +152,25 @@ class Informe{
     public function chartData(){
 
         $acumulado=0;
+        $comprometido=0;
+        
         foreach ($this->Informe['Gastos_Mensuales'] as $mes => $gasto) {
 
+            //gastos reales
             $this->Resumen[$mes]['Gasto_Real']=$gasto['Gasto_Real'];
+
+            //gastos totales acumulados
             $this->Resumen[$mes]['Gasto_Total_Acumulado']=$gasto['Gasto_Total']+$acumulado;
             $acumulado+=$gasto['Gasto_Total'];
+
+            //gastos comprometidos
+            $this->Resumen[$mes]['Gasto_Comprometido_Acumulado']=$gasto['Gasto_Comprometido']+$comprometido;
+            $comprometido+=$gasto['Gasto_Comprometido'];
+
+            //presupuesto inicial
             $this->Resumen[$mes]['Presupuesto_Inicial'] = $this->Informe['Presupuesto_Anual']['Presupuesto'];
+
+            //presupuesto disponible
             $this->Resumen[$mes]['Presupuesto_Disponible'] = $this->Informe['Presupuesto_Anual']['Presupuesto']-
             $this->Resumen[$mes]['Gasto_Total_Acumulado'];
 
