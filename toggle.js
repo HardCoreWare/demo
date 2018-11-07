@@ -295,7 +295,7 @@ function resumen(){
                     data: {
                         labels: meses,
                         datasets: [{
-                            label: "Presupuesto Anual Gastado",
+                            label: "Presupuesto Anual Inicial",
                             backgroundColor: 'rgb(240, 50, 15)',
                             borderColor: 'rgb(255, 99, 50)',
                             data: presupuestosIniciales,
