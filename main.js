@@ -102,6 +102,8 @@ var filterData={
 
 }
 
+
+
 function loadFilter(){
 
                 filterData.filters1=[];
