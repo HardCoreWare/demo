@@ -10,8 +10,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-
 </head>
+
 <body>
 
 <div class="container-fluid">
@@ -35,7 +35,7 @@
                                                     <label for="">Aplicaciones</label>
                                                 </div>
                                                 <div class = "col">
-                                                    <input type="checkbox" checked id="GI-APL">
+                                                    <input class="check-item1" type="checkbox" checked id="GI-APL">
                                                 </div>
                                             </div>
                                         </form>
@@ -48,7 +48,7 @@
                                                     <label for="">Infraestructura</label>
                                                 </div>
                                                 <div class = "col">
-                                                    <input type="checkbox" checked id="GI-INF">
+                                                    <input class="check-item1" type="checkbox" checked id="GI-INF">
                                                 </div>
                                             </div>
                                         </form>
@@ -61,7 +61,7 @@
                                                     <label for="GI-SER">Servicios</label>
                                                 </div>
                                                 <div class = "col">
-                                                    <input type="checkbox" checked id="GI-SER">
+                                                    <input class="check-item1" type="checkbox" checked id="GI-SER">
                                                 </div>
                                             </div>
                                         </form>
@@ -83,7 +83,7 @@
                                                         <label for="">Canales</label>
                                                     </div>
                                                     <div class = "col">
-                                                        <input type="checkbox" checked value="GI-APL-CNL" id="GI-APL-CNL">
+                                                        <input class="check-item2" type="checkbox" checked value="GI-APL-CNL" id="GI-APL-CNL">
                                                     </div>
                                                 </div>
                                             </form>
@@ -96,7 +96,7 @@
                                                         <label for="">Core</label>
                                                     </div>
                                                     <div class = "col">
-                                                        <input type="checkbox" checked value="GI-APL-COR" id="GI-APL-COR">
+                                                        <input class="check-item2" type="checkbox" checked value="GI-APL-COR" id="GI-APL-COR">
                                                     </div>
                                                 </div>                                    
                                             </form>
@@ -109,7 +109,7 @@
                                                         <label for="">Suscripciones</label>
                                                     </div>
                                                         <div class = "col">
-                                                        <input type="checkbox" checked value="GI-APL-COR" id="GI-APL-INF">
+                                                        <input class="check-item2" type="checkbox" checked value="GI-APL-COR" id="GI-APL-INF">
                                                     </div>
                                                 </div>
                                             </form>
@@ -126,7 +126,7 @@
                                                         <label for="">Almacenamiento</label>
                                                     </div>
                                                     <div class = "col">
-                                                        <input type="checkbox" checked value="GI-INF-ALM" id="GI-INF-ALM">
+                                                        <input class="check-item2"  type="checkbox" checked value="GI-INF-ALM" id="GI-INF-ALM">
                                                     </div>
                                                 </div>
                                             </form>
@@ -139,7 +139,7 @@
                                                         <label for="">Cómputo Personal</label>
                                                     </div>
                                                     <div class = "col">
-                                                        <input type="checkbox" checked value="GI-INF-CPR" id="GI-INF-CPR">
+                                                        <input class="check-item2" type="checkbox" checked value="GI-INF-CPR" id="GI-INF-CPR">
                                                     </div>
                                                 </div>                                    
                                             </form>
@@ -151,7 +151,7 @@
                                                         <label for="">Servidores</label>
                                                     </div>
                                                     <div class = "col">
-                                                        <input type="checkbox" checked value="GI-INF-CPR" id="GI-INF-CSR">
+                                                        <input class="check-item2" type="checkbox" checked value="GI-INF-CPR" id="GI-INF-CSR">
                                                     </div>
                                                 </div>                                    
                                             </form>
@@ -164,7 +164,7 @@
                                                         <label for="">Data Center</label>
                                                     </div>
                                                     <div class = "col">
-                                                        <input type="checkbox" checked value="GI-INF-DCT" id="GI-INF-DCT">
+                                                        <input class="check-item2" type="checkbox" checked value="GI-INF-DCT" id="GI-INF-DCT">
                                                     </div>
                                                 </div>                                    
                                             </form>
@@ -182,7 +182,7 @@
                                                         <label for="">Almacenamiento</label>
                                                     </div>
                                                     <div class = "col">
-                                                        <input type="checkbox" checked value="GI-SER-CAM" id="GI-SER-CAM">
+                                                        <input class="check-item2" type="checkbox" checked value="GI-SER-CAM" id="GI-SER-CAM">
                                                     </div>
                                                 </div>
                                             </form>
@@ -195,7 +195,7 @@
                                                         <label for="">Camara de Compensación</label>
                                                     </div>
                                                     <div class = "col">
-                                                        <input type="checkbox" checked value="GI-SER-COR" id="GI-SER-COR">
+                                                        <input class="check-item2" type="checkbox" checked value="GI-SER-COR" id="GI-SER-COR">
                                                     </div>
                                                 </div>                                    
                                             </form>
@@ -207,7 +207,7 @@
                                                         <label for="">Core</label>
                                                     </div>
                                                     <div class = "col">
-                                                        <input type="checkbox" checked value="GI-SER-FSR" id="GI-SER-FSR">
+                                                        <input class="check-item2" type="checkbox" checked value="GI-SER-FSR" id="GI-SER-FSR">
                                                     </div>
                                                 </div>                                    
                                             </form>
@@ -614,5 +614,6 @@
 </div>
 
 </body>
+<script src="mychart.js"></script>
 <script src="main.js"></script>
 </html>

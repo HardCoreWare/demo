@@ -1,6 +1,10 @@
-var chart=null;
-var chart1=null;
-var filterOrdinal=1;
+var onBegin=0;
+
+var clicked=0;
+
+var myChart = new MyChart();
+
+var filterOrdinal=0;
 
 var fields={
 
@@ -102,8 +106,6 @@ var filterData={
     filters3:[]
 
 }
-
-
 
 function loadFilter(){
 
@@ -224,7 +226,8 @@ function loadFilter(){
     
                 });
     
-}
+            }
+
 
 function resumen(){
 
@@ -307,80 +310,18 @@ function resumen(){
 
             }
 
-            var ctx = document.getElementById('myChart').getContext('2d');
-            chart = new Chart(ctx, {
-                // The type of chart we want to create
-                type: 'bar',
-          
-                // The data for our dataset
-                data: {
-                    labels: meses,
-                    datasets: [{
-                        label: "Gasto Mensual real",
-                        backgroundColor: 'rgb(132, 99, 240)',
-                        borderColor: 'rgb(120, 99, 255)',
-                        data: gastosReales,
-                    },
-                    {
-                        label: "Gasto Comprometido Acumulado",
-                        backgroundColor: 'rgb(50, 0, 240)',
-                        borderColor: 'rgb(255, 0, 0)',
-                        data: gastosComprometidos,
-                    }
-                ]
-                },
-            
+            if(onBegin===0){
 
-                
-                                    // Configuration options go here
-                                    options: {
-                                        scales: {
-                                            yAxes: [{
-                                                ticks: {
-                                                    beginAtZero:true
-                                                }
-                                            }]
-                                        }
-                                    }
-            });
+                myChart.begin(meses,gastosReales, gastosComprometidos, presupuestosDisponibles, presupuestosIniciales);
+                onBegin=1;
 
-            
+            }
 
-            var ctx = document.getElementById('myChart1').getContext('2d');
-            chart1 = new Chart(ctx, {
-                    // The type of chart we want to create
-                    type: 'bar',
-    
-                    // The data for our dataset
-                    data: {
-                        labels: meses,
-                        datasets: [{
-                            label: "Presupuesto Anual Inicial",
-                            backgroundColor: 'rgb(240, 50, 15)',
-                            borderColor: 'rgb(255, 99, 50)',
-                            data: presupuestosIniciales,
-                        },
-                        {
-                            label: "Presupuesto Anual Disponible",
-                            backgroundColor: 'rgb(15, 0, 240)',
-                            borderColor: 'rgb(255, 0, 50)',
-                            data: presupuestosDisponibles,
-                        }
-                    ]
-                    },
-    
-                    // Configuration options go here
-                    options: {
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero:true
-                                }
-                            }]
-                        }
-                    }
-                    
-            });
+            else{
+
+                myChart.updateChart(meses,gastosReales, gastosComprometidos, presupuestosDisponibles, presupuestosIniciales);
+
+            }
 
         }
     
@@ -390,26 +331,27 @@ function resumen(){
 
 
 $(document).ready(function(){  
-
-    $(".list1").click(function(){
+ 
+    $(".check-item1").click(function(){
 
         filterOrdinal=1;
-
-        loadFilter();  
-
-    });
-
-    $(".list2").click(function(){
-
-        filterOrdinal=2;
 
         loadFilter();
 
     });
 
+    $(".check-item2").click(function(){
+
+        filterOrdinal=2;
+
+        loadFilter();
+
+
+    });
+
     $(".list3").click(function(){
 
-        filterOrdinal=3;
+        filterOrdinal=0;
 
         loadFilter(); 
 
@@ -418,8 +360,6 @@ $(document).ready(function(){
 });
 
 $("#btnInforme").click(function(){
-
-    filterOrdinal=0;
 
     loadFilter(); 
 
