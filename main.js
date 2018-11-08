@@ -1,5 +1,6 @@
 var chart=null;
 var chart1=null;
+var filterOrdinal=1;
 
 var fields={
 
@@ -120,31 +121,39 @@ function loadFilter(){
             
                     if($(htmlId1).is(':checked')){
                     
-                        $(sonHtmlId1).show();
-    
                         filterData.filters1.push(Codigo_PEP);
 
-                        Tipo_Gasto.Categorias.forEach(Categoria => {
+                        if(filterOrdinal===1){
 
-                            var htmlSonId = "#"+Categoria.Codigo_PEP;
+                            $(sonHtmlId1).show();
 
-                            $(htmlSonId).prop('checked',true);
+                            Tipo_Gasto.Categorias.forEach(Categoria => {
 
-                        });
+                                var htmlSonId = "#"+Categoria.Codigo_PEP;
+
+                                $(htmlSonId).prop('checked',true);
+
+                            });
+                            
+                        }
 
                     }
         
                     else{
-                    
-                        $(sonHtmlId1).hide();
 
-                        Tipo_Gasto.Categorias.forEach(Categoria => {
+                        if(filterOrdinal===1){
 
-                            var htmlSonId = "#"+Categoria.Codigo_PEP;
+                            $(sonHtmlId1).hide();
 
-                            $(htmlSonId).prop('checked',false);
+                            Tipo_Gasto.Categorias.forEach(Categoria => {
 
-                        });
+                                var htmlSonId = "#"+Categoria.Codigo_PEP;
+
+                                $(htmlSonId).prop('checked',false);
+
+                            });
+
+                        }
 
                     }
     
@@ -158,31 +167,41 @@ function loadFilter(){
     
                         if($(htmlId2).is(':checked')){
                     
-                            $(sonHtmlId2).show();
-    
                             filterData.filters2.push(Codigo_PEP);
 
-                            Categoria.PEPs.forEach(PEP => {
+                            //si se selecciono la accion del nivel correcto
+                            if(filterOrdinal===2){
 
-                                var htmlSonId = "#"+PEP.Codigo_PEP;
-    
-                                $(htmlSonId).prop('checked',true);
-    
-                            });
+                                $(sonHtmlId2).show();
+        
+                                Categoria.PEPs.forEach(PEP => {
+
+                                    var htmlSonId = "#"+PEP.Codigo_PEP;
+        
+                                    $(htmlSonId).prop('checked',true);
+        
+                                });
+
+                            }
                 
                         }
             
                         else{
                         
-                            $(sonHtmlId2).hide();
+                            //si se selecciono la accion del nivel correcto
+                            if(filterOrdinal===2){
 
-                            Categoria.PEPs.forEach(PEP => {
+                                $(sonHtmlId2).hide();
 
-                                var htmlSonId = "#"+PEP.Codigo_PEP;
-    
-                                $(htmlSonId).prop('checked',false);
-    
-                            });
+                                Categoria.PEPs.forEach(PEP => {
+
+                                    var htmlSonId = "#"+PEP.Codigo_PEP;
+        
+                                    $(htmlSonId).prop('checked',false);
+        
+                                });
+
+                            }
                 
                         }
     
@@ -208,7 +227,6 @@ function loadFilter(){
 }
 
 function resumen(){
-    console.log(filterData);
 
     var filters=JSON.stringify(filterData);
 
@@ -237,9 +255,7 @@ function resumen(){
             var presupuestosDisponibles=[];
             var presupuestosIniciales=[];
             var meses=[];
-    
-            console.log(resumen);
-    
+        
             for (var key in resumen) {
 
                 if (resumen.hasOwnProperty(key)) {
@@ -358,17 +374,23 @@ $(document).ready(function(){
 
     $(".list1").click(function(){
 
+        filterOrdinal=1;
+
         loadFilter();  
 
     });
 
     $(".list2").click(function(){
 
+        filterOrdinal=2;
+
         loadFilter();
 
     });
 
     $(".list3").click(function(){
+
+        filterOrdinal=3;
 
         loadFilter(); 
 
@@ -377,6 +399,8 @@ $(document).ready(function(){
 });
 
 $("#btnInforme").click(function(){
+
+    filterOrdinal=0;
 
     loadFilter(); 
 
