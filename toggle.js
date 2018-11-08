@@ -121,13 +121,29 @@ function loadFilter(){
                         $(sonHtmlId1).show();
     
                         filterData.filters1.push(Codigo_PEP);
-            
+
+                        Tipo_Gasto.Categorias.forEach(Categoria => {
+
+                            var htmlSonId = "#"+Categoria.Codigo_PEP;
+
+                            $(htmlSonId).prop('checked',true);
+
+                        });
+
                     }
         
                     else{
                     
                         $(sonHtmlId1).hide();
-            
+
+                        Tipo_Gasto.Categorias.forEach(Categoria => {
+
+                            var htmlSonId = "#"+Categoria.Codigo_PEP;
+
+                            $(htmlSonId).prop('checked',false);
+
+                        });
+
                     }
     
                     var Categorias=Tipo_Gasto.Categorias;
@@ -143,12 +159,28 @@ function loadFilter(){
                             $(sonHtmlId2).show();
     
                             filterData.filters2.push(Codigo_PEP);
+
+                            Categoria.PEPs.forEach(PEP => {
+
+                                var htmlSonId = "#"+PEP.Codigo_PEP;
+    
+                                $(htmlSonId).prop('checked',true);
+    
+                            });
                 
                         }
             
                         else{
                         
                             $(sonHtmlId2).hide();
+
+                            Categoria.PEPs.forEach(PEP => {
+
+                                var htmlSonId = "#"+PEP.Codigo_PEP;
+    
+                                $(htmlSonId).prop('checked',false);
+    
+                            });
                 
                         }
     
