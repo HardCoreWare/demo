@@ -330,8 +330,18 @@ function resumen(){
                 ]
                 },
             
-                // Configuration options go here
-                options: {}
+
+                
+                                    // Configuration options go here
+                                    options: {
+                                        scales: {
+                                            yAxes: [{
+                                                ticks: {
+                                                    beginAtZero:true
+                                                }
+                                            }]
+                                        }
+                                    }
             });
 
             
@@ -360,7 +370,16 @@ function resumen(){
                     },
     
                     // Configuration options go here
-                    options: {}
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero:true
+                                }
+                            }]
+                        }
+                    }
+                    
             });
 
         }
