@@ -361,6 +361,8 @@ $(document).ready(function(){
 
 $("#btnInforme").click(function(){
 
+    filterOrdinal=0;
+
     loadFilter(); 
 
     resumen(); 
