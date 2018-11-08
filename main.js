@@ -312,14 +312,14 @@ function resumen(){
 
             if(onBegin===0){
 
-                myChart.begin(meses,gastosReales, gastosComprometidos, presupuestosDisponibles, presupuestosIniciales);
+                myChart.begin(meses,gastosReales, gastosComprometidos, presupuestosIniciales, presupuestosDisponibles );
                 onBegin=1;
 
             }
 
             else{
 
-                myChart.updateChart(meses,gastosReales, gastosComprometidos, presupuestosDisponibles, presupuestosIniciales);
+                myChart.updateChart(meses,gastosReales, gastosComprometidos, presupuestosIniciales, presupuestosDisponibles );
 
             }
 
