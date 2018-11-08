@@ -365,7 +365,7 @@ $("#btnInforme").click(function(){
 
     loadFilter(); 
 
-    resumen(); 
+    resumen();
 
 });
 

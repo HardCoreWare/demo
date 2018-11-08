@@ -25,7 +25,7 @@ class MyChart{
                     data: yData00,
                 },
                 {
-                    label: "Gasto Acumulado",
+                    label: "Gasto Comprometido",
                     backgroundColor: 'rgb(150, 150, 25)',
                     borderColor: 'rgb(255, 200, 0)',
                     data: yData01,
@@ -85,7 +85,7 @@ class MyChart{
 
     updateChart(xlabels, yData00, yData01, yData10, yData11){
 
-        for (var i = 0; i < this.chart.data.labels.length; i++) {
+        for (var i = 0; i < xlabels.length; i++) {
             
             this.chart.data.datasets[0].data[0]=yData00[i];
             this.chart.data.datasets[1].data[1]=yData01[i];
@@ -95,9 +95,10 @@ class MyChart{
 
         }
 
+        this.chart.data.datasets[1].data[1]=0;
+
         this.chart.update();
         this.chart1.update();
-
 
     }
 
