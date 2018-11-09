@@ -332,6 +332,23 @@ function resumen(){
 
 
 $(document).ready(function(){  
+
+    $(".list1").click(function(){
+
+        filterOrdinal=1;
+
+        loadFilter();
+
+
+    });
+
+    $(".list2").click(function(){
+
+        filterOrdinal=2;
+
+        loadFilter();
+
+    });
  
     $(".check-item1").click(function(){
 
