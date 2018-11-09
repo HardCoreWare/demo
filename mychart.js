@@ -83,22 +83,10 @@ class MyChart{
 
     }
 
-    updateChart(xlabels, yData00, yData01, yData10, yData11){
+    clearChart(){
 
-        for (var i = 0; i < xlabels.length; i++) {
-            
-            this.chart.data.datasets[0].data[0]=yData00[i];
-            this.chart.data.datasets[1].data[1]=yData01[i];
-
-            this.chart1.data.datasets[0].data[0]=yData10[i];
-            this.chart1.data.datasets[1].data[1]=yData11[i];
-
-        }
-
-        this.chart.data.datasets[1].data[1]=0;
-
-        this.chart.update();
-        this.chart1.update();
+        this.chart.destroy();
+        this.chart1.destroy();
 
     }
 

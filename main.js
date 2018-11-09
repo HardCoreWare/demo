@@ -319,7 +319,8 @@ function resumen(){
 
             else{
 
-                myChart.updateChart(meses,gastosReales, gastosComprometidos, presupuestosIniciales, presupuestosDisponibles );
+                myChart.clearChart();
+                myChart.begin(meses,gastosReales, gastosComprometidos, presupuestosIniciales, presupuestosDisponibles );
 
             }
 
